@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <!-- Day-2 -->
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        text-align: center;
+        padding: 30px;
+        }
+        img {
+        border-radius: 50%;
+        margin-bottom: 20px;
+        }
+        p {
+        font-size: 18px;
+        }
+  </style>
+
+</head>
+<!-- Day-1 -->
+<body>
+  <h1>Hi, I'm Harsh Vishwakarma</h1>
+  <img src="image.jpg" alt="Profile Picture" width="150"/>
+  <p><strong>Email:</strong> vishwakarmaharah@gmail.com</p>
+  <p><strong>Phone:</strong> +91-7354135230</p>
+  <p>I am passionate about web development and currently interning to improve my frontend skills.</p>
+
+  <h2>Contact Me</h2>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Your Name" /><br><br>
+    <input type="email" id="email" placeholder="Your Email" /><br><br>
+    <input type="tel" id="phone" placeholder="Phone Number" /><br><br>
+    <button type="submit">Submit</button>
+  </form>
+<!-- Day-3 -->
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      if (!name || !email || !phone) {
+        alert("All fields are required!");
+        return false;
+      }
+      if (!email.includes("@")) {
+        alert("Invalid email format!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>
+
